@@ -96,3 +96,5 @@ ENV/
 .ropeproject
 
 *.idea
+.DS_Store
+python3.iml
