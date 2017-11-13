@@ -1,5 +1,6 @@
 def ReplaceSpaces(str1):
-    pass
+    words = [x for x in str1.split('$') if x != '']
+    return '%20'.join(words)
 
 
 if __name__ == "__main__":
@@ -7,7 +8,7 @@ if __name__ == "__main__":
     str2 = 'Mr$$John$Smith'
     str3 = '$$$$$Mr$$John$Smith'
     str4 = '$$$$$Mr$$John$$$$Smith$'
-    ReplaceSpaces(str1)
-    ReplaceSpaces(str2)
-    ReplaceSpaces(str3)
-    ReplaceSpaces(str4)
+    print(ReplaceSpaces(str1))
+    print(ReplaceSpaces(str2))
+    print(ReplaceSpaces(str3))
+    print(ReplaceSpaces(str4))
