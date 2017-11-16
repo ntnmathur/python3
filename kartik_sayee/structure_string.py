@@ -21,5 +21,3 @@ if __name__ == "__main__":
     str1 = '    The     sky is     very blue     '
     s = structure_string(str1)
     print(s)
-
-q
