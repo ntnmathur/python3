@@ -4,7 +4,7 @@ def return_balanced(input_str):
     pushChars, popChars = "<({[", ">)}]"
     stack = []
     input_str = [c for c in input_str if c in pushChars or c in popChars]
-    print(input_str)
+    # print(input_str)
     for char in input_str:
         if char in pushChars:
             stack.append(char)
@@ -16,8 +16,8 @@ def return_balanced(input_str):
                 balancing_bracket = pushChars[popChars.index(char)]
                 if popped != balancing_bracket:
                     return False
-        else:
-            return False
+        # else:
+        #     return False
     return not len(stack)
 
 
