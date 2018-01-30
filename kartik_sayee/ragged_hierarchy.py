@@ -28,13 +28,17 @@ def get_children(relation, node):
     return children
 
 def generate_from_map(hash_map):
+    print(hash_map)
     ragged_hierarchy = []
     for key in hash_map:
-        ragged_hierarchy.append((key,key))
+        if (key,key) not in ragged_hierarchy:
+            ragged_hierarchy.append((key,key))
         for elem in hash_map[key]:
-            ragged_hierarchy.append((key,elem))
-            ragged_hierarchy.append((elem,elem))
-    return set(ragged_hierarchy)
+            if (key,elem) not in ragged_hierarchy:
+                ragged_hierarchy.append((key,elem))
+            if (elem,elem) not in ragged_hierarchy:
+                ragged_hierarchy.append((elem,elem))
+    return ragged_hierarchy
 
 relation = [('all','web'),('all','mobile'),('web','windows'),('web','mac'),('mobile','ios'),('mobile','android'),('ios','iphone'),('ios','ipad')]
 print(get_it(relation))
