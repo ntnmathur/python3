@@ -11,7 +11,7 @@ def permute(num):
                 result.append(elem[:i] + [first_num] + elem[i:])
     return result
 
-my_nums = [1,2,3,4,7,8]
+my_nums = [1,2,3]
 print("Original Cofllection: ",my_nums)
 all = permute(my_nums)
 print(len(all))

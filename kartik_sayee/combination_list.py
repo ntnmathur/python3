@@ -12,4 +12,4 @@ def combinations(target,data,collector=[]):
         combinations(new_target,new_data,collector)
     return collector
 
-print(combinations([],['us','uk','india']))
+print(combinations([],['a','b','c']))

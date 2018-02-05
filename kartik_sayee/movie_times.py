@@ -50,7 +50,17 @@ def MovieTimes(intervals):
         print('----------------------')
     return merged
 
+def get_sum(merged):
+    sum = 0
+    for tup in merged:
+        minutes = tup[1] - tup[0]
+        sum += minutes
+    return sum
+
 
 if __name__ == "__main__":
     tup_list=[(0,15),(20,29),(40,50),(10,30),(45,54),(55,65)]
+    merged = MovieTimes(tup_list)
     print(MovieTimes(tup_list))
+
+    print(get_sum(merged))
