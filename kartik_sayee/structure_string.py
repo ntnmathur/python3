@@ -1,3 +1,5 @@
+#The lengthy string has unwanted spaces between words. Remove that
+
 def structure_string(s):
     fnl_list = split(s)
     return ' '.join(fnl_list)
